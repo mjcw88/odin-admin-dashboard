@@ -172,7 +172,7 @@ body {
 }
 
 .search-bar input:focus {
-    border: 1px solid var(--blue);
+    border: 0.0625rem solid var(--blue);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
@@ -250,13 +250,22 @@ button:active {
     font-size: 1.25rem;
     font-weight: bold;
     padding-bottom: 0.75rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .main-body-block {
     padding: 30px;
     background-color: var(--white);
     border-radius: 0.5rem;
-    box-shadow: 4px 8px 8px 0px rgba(0, 0, 0, 0.20)
+    box-shadow: 4px 8px 8px 0px rgba(0, 0, 0, 0.20);
+}
+
+.announcements-container,
+.trending-container {
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .announcements-container > div:not(:first-child) {
@@ -265,7 +274,7 @@ button:active {
 
 .announcements-container > div:not(:last-child) {
     padding-bottom: var(--annoucmentpadding);
-    border-bottom: 1px solid var(--greyborder);
+    border-bottom: 0.0625rem solid var(--greyborder);
 }
 
 .main-body-title {
