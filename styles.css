@@ -57,7 +57,6 @@ body {
     display: none;
     position: absolute;
     right: 0;
-
     background-color: var(--white);
     box-shadow: 0px 8px 16px 0px rgba(0, 0 ,0, 0.2);
 }
@@ -250,9 +249,7 @@ button:active {
     font-size: 1.25rem;
     font-weight: bold;
     padding-bottom: 0.75rem;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    word-break: break-word;
 }
 
 .main-body-block {
@@ -263,9 +260,15 @@ button:active {
 }
 
 .announcements-container,
-.trending-container {
+.trending-container,
+.projects-container {
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.announcements-container,
+.projects-container {
+    word-break: break-word;
 }
 
 .announcements-container > div:not(:first-child) {
@@ -293,6 +296,7 @@ button:active {
 .trending-container {
     display: flex;
     flex-direction: column;
+    word-break: break-all;
 }
 
 .trending-container > div {
@@ -474,7 +478,7 @@ button:active {
     }
 
     .main-body-container {
-        grid-template-columns: 3.5fr minmax(auto, 350px);
+        grid-template-columns: 1fr minmax(350px, 500px);
         grid-template-rows: auto 1fr;
     }
 
